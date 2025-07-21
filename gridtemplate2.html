@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 10px;
+        }
+        .item {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+       .item46 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;       /* Sidebar | Form */
+    grid-template-rows: auto auto;        /* Two rows for sidebar */
+    grid-template-areas:
+        "sidebar1 form"
+        "sidebar2 form";
+    gap: 10px;
+    }
+
+    .item4 {
+        grid-area: sidebar1;
+        background: #f2f2f2;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    .item5 {
+        grid-area: sidebar2;
+        background: #e6e6e6;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+
+    .item6 {
+        grid-area: form;
+        background: #d9edf7;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+    /* Responsive layout for mobile */
+    @media (max-width: 768px) {
+        .item46 {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "sidebar1"
+                "sidebar2"
+                "form";
+        }
+    }
+
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Header</div>
+        <div class="item item2">Navbar</div>
+        <div class="item item3">Slider</div>
+        <div class="item item46">
+            <div class="item4">SideBar 1</div>
+            <div class="item5">SideBar 2</div>
+            <div class="item6">Registration Form</div>
+        </div>
+        <div class="item item7">Footer</div>
+    </div>
+</body>
+</html>

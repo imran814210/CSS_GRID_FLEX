@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Layout</title>
+  <style>
+    /* Main container using flex */
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px;
+    }
+
+    .item {
+      background-color: #f2f2f2;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    /* Flex layout for .item46 */
+    .item46 {
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+    }
+
+    /* Sidebar container inside .item46 */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .form-section {
+      flex: 2;
+      background: #d9edf7;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .item4, .item5 {
+      background: #f2f2f2;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+
+    /* Responsive: stack sidebar and form vertically */
+    @media (max-width: 768px) {
+      .item46 {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">Header</div>
+    <div class="item item2">Navbar</div>
+    <div class="item item3">Slider</div>
+
+    <div class="item46">
+      <div class="sidebar">
+        <div class="item4">SideBar 1</div>
+        <div class="item5">SideBar 2</div>
+      </div>
+      <div class="form-section">Registration Form</div>
+    </div>
+
+    <div class="item item7">Footer</div>
+  </div>
+</body>
+</html>
