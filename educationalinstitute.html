@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Educational Institute</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    /* Sticky Navbar */
+    nav {
+      background-color: #0066cc;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    nav ul li:hover {
+      background-color: #005bb5;
+    }
+
+    /* Main Content */
+    .content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    .head-message {
+      background-color: #f0f8ff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .head-message h2 {
+      color: #004080;
+      margin-bottom: 1rem;
+    }
+    .galary{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+    .item{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(247, 246, 245);
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+    }
+    .item:hover{
+        transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Messenger Icon */
+    .messenger-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0078ff;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .messenger-icon:hover {
+      background-color: #005bb5;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+        padding: 3rem 6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>ABC International School</h1>
+    <p>Empowering Students for a Brighter Future</p>
+  </header>
+
+  <!-- Sticky Navbar -->
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Departments</li>
+      <li>Admissions</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="head-message">
+      <h2>Message from the Head of Institute</h2>
+      <p>
+        Welcome to ABC International School, where education meets excellence. We believe in holistic development and encourage our students to excel not only academically, but also morally and socially. Our team of experienced educators is committed to nurturing young minds to become tomorrow's leaders.
+      </p>
+    </div>
+  </div>
+  <div class="galary">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+        <div class="item">Item 9</div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ABC International School | All Rights Reserved
+  </footer>
+
+  <!-- Messenger Icon -->
+  <div class="messenger-icon">
+  </div>
+
+</body>
+</html>
